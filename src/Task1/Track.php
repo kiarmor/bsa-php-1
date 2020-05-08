@@ -81,32 +81,3 @@ $track->all();
 $winner = $track->run();
 
 var_dump($winner);
-
-/*
- *  public function run($carA, $carB): Car
-    {
-        // @todo
-        $total_dist = $this->lapsNumbers * $this->lapLength;
-
-        $car1 =  $this->cars[$carA->getId()-1];
-        $car2 =  $this->cars[$carB->getId()-1];
-
-        $c1_PT_num = floor($total_dist / (($car1->getFuelTankVolume() / $car1->getFuelConsumption()) * 100));
-        $c1_PT_time = $c1_PT_num *  $car1->getPitStopTime();
-        $c2_PT_num = floor($total_dist / (($car2->getFuelTankVolume() / $car2->getFuelConsumption()) * 100));
-        $c2_PT_time = $c2_PT_num *  $car2->getPitStopTime();
-
-
-        $c1 = $car1->getSpeed() - $c1_PT_time;
-        $c2 = $car2->getSpeed() - $c2_PT_time;
-
-        if($c1 >= $c2){
-            return $this->cars[$carA->getId()-1];
-        }
-       else if($c2 > $c1){
-            return $this->cars[$carB->getId()-1];
-        }
-       else return $this->cars[$carA->getId()-1];
-    }
-}
-*/
