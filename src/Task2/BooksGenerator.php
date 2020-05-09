@@ -3,13 +3,15 @@
 declare(strict_types=1);
 
 namespace App\Task2;
+require_once ('Book.php');
 
 class BooksGenerator
 {
-    public function generate(Book $book)/*: \Generator*/
+
+    public function generate(Book $book): \Generator
     {
         //@todo
-        return $book->getTitle();
-    }
 
+        yield $book->getTitle();
+    }
 }

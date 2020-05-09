@@ -74,10 +74,8 @@ $car3 = new Car(3,'https://fordsalomao.com.br/wp-content/uploads/2019/02/1499441
 
 $track = new Track(30, 10);
 
-$track->add($car3);
 $track->add($car1);
+$track->add($car3);
 $track->all();
 
 $winner = $track->run();
-
-var_dump($winner);
