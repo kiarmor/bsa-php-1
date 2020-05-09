@@ -37,18 +37,23 @@ class Book
         return $this->pagesNumber;
     }
 }
+/*
+$book1 = new Book('Don Quixote', 100, 100);
+$book2 = new Book('The Great Gatsby', 50, 50);
+$book3 = new Book('Harry Potter', 20, 20);
 
-$book1 = new Book('War', 50, 500);
-$book2 = new Book('P', 400, 400);
-$book3 = new Book('NWA', 600, 600);
+$b4 = new Book('Hamlet', 150, 30);
+$b5 = new Book('Crime and Punishment', 600, 50);
+$b6 = new Book('Pride and Prejudice', 40, 60);
+
+
 
 $libraryBooks = [$book1, $book2, $book3];
-$storeBooks = [$book1, $book2, $book3];
-$gen = new BooksGenerator();
-$s = $gen->generate($book1);
-var_dump($s);
-/*foreach ($libraryBooks as $b){
-    $g = $gen->generate($b);
+$libraryBooksPage = 50;
+$storeBooks = [$b4, $b5, $b6];
+$storeBooksPrice = 60;
+$gen = new BooksGenerator($libraryBooksPage, $libraryBooks, $storeBooksPrice, $storeBooks);
 
-}
-var_dump($g);*/
+$s[] = $gen->generate($gen->filtered);
+
+var_dump($s);*/
