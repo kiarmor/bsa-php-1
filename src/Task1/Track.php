@@ -64,7 +64,7 @@ class Track
 
     }
 }
-
+/*
 $car1 = new Car(1,'https://pbs.twimg.com/profile_images/595409436585361408/aFJGRaO6_400x400.jpg',
     'BMW',100, 20, 15, 45);
 $car2 = new Car(2,'https://i.pinimg.com/originals/e4/15/83/e41583f55444b931f4ba2f0f8bce1970.jpg',
@@ -78,4 +78,4 @@ $track->add($car1);
 $track->add($car3);
 $track->all();
 
-$winner = $track->run();
+$winner = $track->run();*/
