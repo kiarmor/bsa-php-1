@@ -44,6 +44,7 @@ class Track
     public function run(): Car
     {
         // @todo
+        if ($this->cars <= 1){throw new Exception('need two cars');}
         $total_dist = $this->lapsNumbers * $this->lapLength;
         $car1 =  $this->cars[0];
         $car2 =  $this->cars[1];
