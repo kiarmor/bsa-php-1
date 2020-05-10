@@ -12,5 +12,18 @@ class CarTrackHtmlPresenter
     public function present(Track $track): string
     {
         //@todo
-    }
+        $cars = $track->all();
+        $car_inf = [];
+
+            for ($i = 0; $i < count($cars); ) {
+                foreach ($cars as $car) {
+                $car_inf [$i] ='<a>' . $car->getName() . ': ' . $car->getSpeed() . ', ' . $car->getFuelConsumption() . ' ' . '<img src="' . $car->getImage() . '">' . '<br>' . '</a>';
+
+                $i++;
+            }
+        }
+        $all_cars = implode('', $car_inf);
+
+            return $all_cars;
+        }
 }

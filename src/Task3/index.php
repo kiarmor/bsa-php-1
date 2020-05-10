@@ -1,12 +1,16 @@
 <?php
 
 require __DIR__ . '/../../vendor/autoload.php';
+require_once '../Task1/Track.php';
 
 use App\Task1\Track;
 use App\Task3\CarTrackHtmlPresenter;
 use \App\Task1\Car;
 
 $arena = new Track(4, 40);
+$arena->add($car1);
+$arena->add($car2);
+$arena->add($car3);
 
 $presenter = new CarTrackHtmlPresenter();
 $presentation = $presenter->present($arena);
