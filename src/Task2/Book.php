@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Task2;
 require_once ('BooksGenerator.php');
+use Exception;
 
 class Book
 {
