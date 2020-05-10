@@ -17,11 +17,12 @@ class CarTrackHtmlPresenter
 
             for ($i = 0; $i < count($cars); ) {
                 foreach ($cars as $car) {
-                $car_inf [$i] = '<a>' . $car->getId() . '</a> ' . '<a name="' . $car->getName()  . '">' . $car->getName() . '</a>' . ' speed ' . $car->getSpeed() . ' km\h ' . '<img src="' . $car->getImage() . '">';
+                $car_inf [$i] ='<a>' . $car->getName() . ': ' . $car->getSpeed() . ', ' . $car->getFuelConsumption() . ' ' . '<img src="' . $car->getImage() . '">' . '<br>' . '</a>';
+
                 $i++;
             }
         }
-        $all_cars = implode(' ', $car_inf);
+        $all_cars = implode('', $car_inf);
 
             return $all_cars;
         }
