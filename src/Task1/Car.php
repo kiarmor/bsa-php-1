@@ -3,10 +3,23 @@
 declare(strict_types=1);
 
 namespace App\Task1;
+use Exception;
+
 require_once('Track.php');
 
 class Car
 {
+    /**
+     * Car constructor.
+     * @param int $id
+     * @param string $image
+     * @param string $name
+     * @param int $speed
+     * @param int $pitStopTime
+     * @param float $fuelConsumption
+     * @param float $fuelTankVolume
+     * @throws Exception
+     */
     public function __construct(
         int $id,
         string $image,
@@ -19,9 +32,13 @@ class Car
         $this->id = $id;
         $this->image = $image;
         $this->name = $name;
+        if ($speed <= 0){throw new Exception('Speed cant be negative');}
         $this->speed = $speed;
+        if ($pitStopTime <= 0){throw new Exception('pitStopTime cant be negative');}
         $this->pitStopTime = $pitStopTime;
+        if ($fuelConsumption <= 0){throw new Exception('fuelConsumption cant be negative');}
         $this->fuelConsumption = $fuelConsumption;
+        if ($fuelTankVolume <= 0){throw new Exception('fuelTankVolume cant be negative');}
         $this->fuelTankVolume = $fuelTankVolume;
 
     }

@@ -11,7 +11,9 @@ class Track
     public function __construct(float $lapLength, int $lapsNumber)
     {
         //@todo
+        if ($lapLength <= 0){throw new Exception('lapLength cant be negative');}
         $this->lapLength = $lapLength;
+        if ($lapsNumber <= 0){throw new Exception('lapsNumbers cant be negative');}
         $this->lapsNumbers = $lapsNumber;
     }
 

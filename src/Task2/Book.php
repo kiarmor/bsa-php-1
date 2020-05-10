@@ -15,7 +15,9 @@ class Book
     public function __construct(string $title, int $price, int $pagesNumber)
     {
         $this->title = $title;
+        if ($price <= 0){throw new Exception('price cant be negative');}
         $this->price = $price;
+        if ($pagesNumber <= 0){throw new Exception('pagesNumber cant be negative');}
         $this->pagesNumber = $pagesNumber;
     }
 
