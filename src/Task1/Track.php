@@ -33,7 +33,13 @@ class Track
     public function add(Car $car): void
     {
         // @todo
-       $this->cars [] = $car;
+        foreach ($this->cars as $c){
+            if (($c === $car)){
+                throw new Exception('this car already added');
+            }
+        }
+        $this->cars [] = $car;
+
     }
 
     public function all(): array
@@ -45,7 +51,7 @@ class Track
     public function run(): Car
     {
         // @todo
-        if ($this->cars <= 1){throw new Exception('need two cars');}
+        if (count($this->all()) != 2){throw new Exception('need two cars');}
         $total_dist = $this->lapsNumbers * $this->lapLength;
         $car1 =  $this->cars[0];
         $car2 =  $this->cars[1];
